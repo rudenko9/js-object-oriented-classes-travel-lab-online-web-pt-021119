@@ -26,4 +26,15 @@ class Route {
     this.endingLocation = endingLocation
   }
   
-  
+  blocksTravelled() {
+    const verticalDistance = Math.abs(this.beginningLocation.vertical - this.endingLocation.vertical);
+    const horizontalDistance = Math.abs(eastWest.indexOf(this.beginningLocation.horizontal) - (eastWest.indexOf(this.endingLocation.horizontal)));
+    return verticalDistance + horizontalDistance;
+  }
+
+  estimatedTime(peak) {
+    return peak === true ? this.blocksTravelled()/2 : this.blocksTravelled()/3;
+  }
+
+
+}
