@@ -20,3 +20,10 @@ let eastWest = [
   '5th Avenue'
 ];
 
+class Route {
+  constructor (beginningLocation, endingLocation) {
+    this.beginningLocation = beginningLocation;
+    this.endingLocation = endingLocation
+  }
+  
+  
